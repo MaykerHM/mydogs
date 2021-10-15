@@ -1,7 +1,8 @@
 import { DataTypes } from 'sequelize/types'
 import { db } from '../db'
+import { UserModel } from './UserModel'
 
-export const DogModel = db.define('user', {
+export const DogModel = db.define('dog', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -13,3 +14,5 @@ export const DogModel = db.define('user', {
     allowNull: false,
   },
 })
+
+DogModel.belongsTo(UserModel)

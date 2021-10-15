@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize/types'
 import { db } from '../db'
+import { DogModel } from './DogModel'
 
 export const UserModel = db.define('user', {
   id: {
@@ -21,3 +22,5 @@ export const UserModel = db.define('user', {
     allowNull: false,
   },
 })
+
+UserModel.hasMany(DogModel)
