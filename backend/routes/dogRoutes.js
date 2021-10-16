@@ -2,14 +2,14 @@ import express from 'express'
 
 const userRoutes = express.Router()
 
-userRoutes.post('/dogs', async () => {})
+userRoutes.post('/', async () => {})
 
-userRoutes.get('/dogs', async () => {})
+userRoutes.get('/', async () => {})
 
-userRoutes.get('/dogs/:dogID', async () => {})
+userRoutes.get('/:dogID', async () => {})
 
-userRoutes.put('/dogs/:dogID', async () => {})
+userRoutes.put('/:dogID', async () => {})
 
-userRoutes.delete('/dogs/:dogID', async () => {})
+userRoutes.delete('/:dogID', async () => {})
 
 export { userRoutes }

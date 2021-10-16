@@ -9,7 +9,7 @@ app.use(express.json())
 app.use('/api/users', userRoutes)
 app.use('/api/dogs', dogRoutes)
 
-app.listen(3333, () => {
-  db.sync()
+app.listen(3333, async () => {
+  await db.sync()
   console.log('Running on port 3333')
 })
