@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize/types'
-import { db } from '../db'
-import { DogModel } from './DogModel'
+import { db } from '../db.js'
+import { DogModel } from './DogModel.js'
 
 export const UserModel = db.define('user', {
   id: {

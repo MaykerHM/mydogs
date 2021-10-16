@@ -1,15 +1,15 @@
 import express from 'express'
 
-const routes = express.Router()
+const userRoutes = express.Router()
 
-routes.post('/dogs', async () => {})
+userRoutes.post('/dogs', async () => {})
 
-routes.get('/dogs', async () => {})
+userRoutes.get('/dogs', async () => {})
 
-routes.get('/dogs/:dogID', async () => {})
+userRoutes.get('/dogs/:dogID', async () => {})
 
-routes.put('/dogs/:dogID', async () => {})
+userRoutes.put('/dogs/:dogID', async () => {})
 
-routes.delete('/dogs/:dogID', async () => {})
+userRoutes.delete('/dogs/:dogID', async () => {})
 
-export default routes
+export { userRoutes }
