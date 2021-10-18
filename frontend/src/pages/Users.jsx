@@ -68,18 +68,16 @@ export function Users() {
             cpf: 'xxx.xxx.xxx-xx',
           }}
           onSubmit={(values, actions) => {
-            axios
-              .post('http://localhost:3333/api/users', values)
-              .then(() =>
-                toast({
-                  title: 'Account created.',
-                  description: "We've created your account for you.",
-                  status: 'success',
-                  duration: 9000,
-                  isClosable: true,
-                })
-              )
-              .catch()
+            axios.post('http://localhost:3333/api/users', values).then(() => {
+              toast({
+                title: 'User created.',
+                description: "We've created a new user.",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+              actions.setSubmitting(false)
+            })
           }}
         >
           {(props) => (

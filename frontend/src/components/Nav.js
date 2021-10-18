@@ -11,12 +11,12 @@ export function Nav() {
     >
       <Link to='/'>
         <Text fontSize='2rem' fontWeight='bold'>
-          Users
+          Add Users
         </Text>
       </Link>
       <Link to='/dogs'>
         <Text fontSize='2rem' fontWeight='bold'>
-          Dogs
+          Add Dogs
         </Text>
       </Link>
       <Link to='/adoption'>

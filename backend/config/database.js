@@ -1,6 +1,6 @@
 export default {
   dialect: 'mysql',
-  host: 'localhost',
+  host: 'db',
   username: 'root',
   password: 'root',
   database: 'db',
