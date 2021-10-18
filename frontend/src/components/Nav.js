@@ -3,15 +3,26 @@ import { Link } from 'react-router-dom'
 
 export function Nav() {
   return (
-    <Flex bg='gray.500' justifyContent='space-around'>
+    <Flex
+      bg='teal.500'
+      justifyContent='space-around'
+      alignItems='center'
+      height='4rem'
+    >
       <Link to='/'>
-        <Text fontSize='2rem'>Users</Text>
+        <Text fontSize='2rem' fontWeight='bold'>
+          Users
+        </Text>
       </Link>
       <Link to='/dogs'>
-        <Text fontSize='2rem'>Dogs</Text>
+        <Text fontSize='2rem' fontWeight='bold'>
+          Dogs
+        </Text>
       </Link>
       <Link to='/adoption'>
-        <Text fontSize='2rem'>Whose dog is it?</Text>
+        <Text fontSize='2rem' fontWeight='bold'>
+          Adoption
+        </Text>
       </Link>
     </Flex>
   )
