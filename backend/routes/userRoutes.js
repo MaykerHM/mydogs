@@ -1,15 +1,16 @@
 import express from 'express'
+import UserController from '../controllers/UserController.js'
 
-const dogRoutes = express.Router()
+const userRoutes = express.Router()
 
-dogRoutes.post('/', async () => {})
+userRoutes.post('/', UserController.create)
 
-dogRoutes.get('/', async () => {})
+userRoutes.get('/', UserController.findAll)
 
-dogRoutes.get('/:userID', async () => {})
+userRoutes.get('/:userID', UserController.findOne)
 
-dogRoutes.put('/:userID', async () => {})
+userRoutes.put('/:userID', UserController.update)
 
-dogRoutes.delete('/:userID', async () => {})
+userRoutes.delete('/:userID', UserController.delete)
 
-export { dogRoutes }
+export { userRoutes }

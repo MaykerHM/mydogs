@@ -1,0 +1,7 @@
+POST http://localhost:3333/api/dogs
+content-Type: application/json
+
+{
+  "name": "Bilu",
+  "userId": 1
+}

@@ -1,18 +1,24 @@
-import { DataTypes } from 'sequelize'
+import sequelize from 'sequelize'
 import { db } from '../db.js'
 import { UserModel } from './UserModel.js'
+const { DataTypes } = sequelize
 
-export const DogModel = db.define('dog', {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true,
+export const DogModel = db.define(
+  'dogs',
+  {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      references: { model: 'users', key: 'id' },
+    },
   },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-})
+  {
+    tableName: 'dogs',
+  }
+)
 
+UserModel.hasMany(DogModel)
 DogModel.belongsTo(UserModel)

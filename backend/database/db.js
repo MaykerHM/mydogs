@@ -1,4 +1,5 @@
-import { Sequelize } from 'sequelize'
-import dbConfig from '../config/database.json'
+import sequelize from 'sequelize'
+const { Sequelize } = sequelize
+import dbConfig from '../config/database.js'
 
 export const db = new Sequelize(dbConfig)

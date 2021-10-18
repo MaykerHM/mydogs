@@ -1,0 +1,8 @@
+POST http://localhost:3333/api/users
+content-Type: application/json
+
+{
+  "name": "joao",
+  "birthDate": "1991-10-16",
+  "cpf":"08263909945"
+}
