@@ -1,8 +1,8 @@
 export default {
   dialect: 'mysql',
-  host: 'db',
+  host: 'localhost',
   username: 'root',
   password: 'root',
-  database: 'database',
+  database: 'db',
   port: '3306',
 }

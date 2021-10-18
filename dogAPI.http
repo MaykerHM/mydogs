@@ -1,3 +1,4 @@
+### Create
 POST http://localhost:3333/api/dogs
 content-Type: application/json
 
@@ -5,3 +6,23 @@ content-Type: application/json
   "name": "Bilu",
   "userId": 1
 }
+
+### FindAll
+GET http://localhost:3333/api/dogs
+
+### FindAllStrayDogs
+GET http://localhost:3333/api/dogs/stray
+
+### FindOne
+GET http://localhost:3333/api/dogs/1
+
+### Update
+PUT http://localhost:3333/api/dogs/1
+content-Type: application/json
+
+{
+  "name": "Bolota"
+}
+
+### Delete
+DELETE http://localhost:3333/api/dogs/1

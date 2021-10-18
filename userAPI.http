@@ -1,3 +1,4 @@
+### Create
 POST http://localhost:3333/api/users
 content-Type: application/json
 
@@ -6,3 +7,20 @@ content-Type: application/json
   "birthDate": "1991-10-16",
   "cpf":"08263909945"
 }
+
+### FindAll
+GET http://localhost:3333/api/users
+
+### FindOne
+GET http://localhost:3333/api/users/1
+
+### Update
+PUT http://localhost:3333/api/users/1
+content-Type: application/json
+
+{
+  "name": "Jose"
+}
+
+### Delete
+DELETE http://localhost:3333/api/users/1

@@ -7,10 +7,12 @@ dogRoutes.post('/', DogController.create)
 
 dogRoutes.get('/', DogController.findAll)
 
-dogRoutes.get('/:dogID', DogController.findOne)
+dogRoutes.get('/stray', DogController.findAllStrayDogs)
 
-dogRoutes.put('/:dogID', DogController.update)
+dogRoutes.get('/:dogId', DogController.findOne)
 
-dogRoutes.delete('/:dogID', DogController.delete)
+dogRoutes.put('/:dogId', DogController.update)
+
+dogRoutes.delete('/:dogId', DogController.delete)
 
 export { dogRoutes }

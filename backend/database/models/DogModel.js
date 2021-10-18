@@ -12,6 +12,8 @@ export const DogModel = db.define(
     },
     userId: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      defaultValue: null,
       references: { model: 'users', key: 'id' },
     },
   },
