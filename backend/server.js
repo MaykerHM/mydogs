@@ -7,13 +7,15 @@ import { DogModel } from './database/models/DogModel.js'
 
 const app = express()
 
-UserModel.sync()
-  .then(DogModel.sync())
-  .then(
-    app.listen(3333, async () => {
-      console.log('Running on port 3333')
-    })
-  )
+const dbAndServer = async () => {
+  await UserModel.sync()
+  await DogModel.sync()
+  await app.listen(3333, async () => {
+    console.log('Running on port 3333')
+  })
+}
+
+dbAndServer()
 
 app.use(cors())
 app.use(express.json())
